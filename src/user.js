@@ -1,3 +1,5 @@
+const Review = require('./review')
+
 class User {
   constructor(name, age) {
     this.name = name
@@ -18,15 +20,13 @@ class User {
 
   addToBasket(product) {
     this.basket.push(product)
-    product.addedToBasketBy.push(this)
   }
 
-  review(product) {
-    this.reviews.push(product)
-   
+  makeReview(product, text, rate) {
+    const review = new Review(text, rate, this)
+    this.reviews.push(review)
+    product.reviews.push(review)
   }
 }
 
-
-
-module.exports = User;
+module.exports = User
