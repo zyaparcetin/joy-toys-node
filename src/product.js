@@ -1,13 +1,10 @@
 class Product {
-  constructor(name,price) {
+  constructor(name, price) {
     this.name = name
     this.price = price
     this.likedBy = []
-    this.addedToBasketBy = []
-    this.reviewedBy = []
+    this.reviews = []
   }
 }
 
-
-
-module.exports = Product;
+module.exports = Product
