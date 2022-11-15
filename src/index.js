@@ -1,11 +1,12 @@
-const User = require("./user");
-const Product = require("./product");
+const User = require('./user')
+const Product = require('./product')
+// const Review = require('./review')
 
-const kerem = new User("kerem", 11);
-const mete = new User("mete", 7)
+const kerem = new User('kerem', 11)
+const mete = new User('mete', 7)
 
-const teddyBear = new Product("teddy bear", 19.99)
-const kitty = new Product("kitty", 14.99)
+const teddyBear = new Product('teddy bear', 19.99)
+const kitty = new Product('kitty', 14.99)
 
 kerem.addToBasket(kitty)
 mete.addToBasket(teddyBear)
