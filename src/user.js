@@ -8,7 +8,7 @@ class User {
   }
 
   greet() {
-    console.log(`Hello ${user.name}, welcome to Joy Toys!`)
+    console.log(`Hello ${this.name}, welcome to Joy Toys!`)
   }
 
   likeProduct(product) {
