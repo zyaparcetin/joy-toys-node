@@ -2,7 +2,7 @@
 class User {
   name: string 
   age: number
-  likes: [Likes]
+  likes: [Product]
   basket: [Basket]
   reviews: [Reviews]
 
@@ -10,14 +10,13 @@ class User {
   greet()
   likeProduct(product: Product)
   addToBasket(product: Product)
-  addToBasket(product: Product)
-  makeReview(product: Product, text: Text, rate: Rate)
+  makeReview(product: Product, text: string, rate: number)
 }
 
 class Product {
   name: string
   price: number
-  likedBy: [LikedBy]
+  likedBy: [User]
   reviews: [Reviews]
 
   constructor(name: string, price: number)
@@ -34,6 +33,7 @@ class Review {
 User "1"  --> "0..*"  Product : adds to basket, likes, reviews
 Product --> "0..*" User : liked by, reviewed by
 User --> Review : reviews, rates
-Review --> "0..*" Product : reviewed by
+Product --> Review : has
+
 
 @enduml
